@@ -65,7 +65,7 @@
     $.mobile.loading("show");
     $.ajax({
       type: 'GET',
-      url: "http://mitaxijj.com.ec/system/rutas.buskoo.com/assets/connect/connect.php",
+      url: "http://gdt.com.ec/rutas.buskoo.com/assets/connect/connect.php",
       contentType: "application/json",
       dataType: 'json',
       jsonp : "callback",
@@ -73,8 +73,8 @@
       data : {cachehora : (new Date()).getTime()},
       }).done(function(response){
         if(response.state === 'ok'){
-          $.mobile.loading("hide");
-          window.location.assign("http://mitaxijj.com.ec/system/rutas.buskoo.com/es/ulogin");
+          $.mobile.loading("hide"); 
+          window.location.assign("http://gdt.com.ec/rutas.buskoo.com/es/ulogin");
         }else{
           $.mobile.loading("hide");
           alert('No dispone de conexion a internet o el servidor no responde, verifique su conexión y vuelva a intentarlo.');
